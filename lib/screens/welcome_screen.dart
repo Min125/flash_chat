@@ -19,7 +19,6 @@ class _WelcomeScreenState extends State<WelcomeScreen>
   @override
   void initState() {
     super.initState();
-
     controller = AnimationController(
       vsync: this,
       duration: const Duration(seconds: 3),
@@ -54,13 +53,15 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                     height: 60.0,
                   ),
                 ),
-                AnimatedTextKit(animatedTexts: [
-                  TypewriterAnimatedText(
-                    'Flash Sale',
-                    textStyle: const TextStyle(
-                        fontSize: 45.0, fontWeight: FontWeight.w900),
-                  )
-                ])
+                Expanded(
+                  child: AnimatedTextKit(animatedTexts: [
+                    TypewriterAnimatedText(
+                      'Flash Chat',
+                      textStyle: const TextStyle(
+                          fontSize: 40.0, fontWeight: FontWeight.w900),
+                    )
+                  ]),
+                )
               ],
             ),
             const SizedBox(
